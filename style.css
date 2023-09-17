@@ -1,0 +1,27 @@
+html {
+  width: 80vw;
+  margin: auto;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  height: 70vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#imgs,
+#score,
+#choices {
+  width: 100%;
+  font-size: large;
+  display: flex;
+  justify-content: space-between;
+}
+
+#choices {
+  justify-content: space-around;
+}
