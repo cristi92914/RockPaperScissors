@@ -21,7 +21,13 @@ const getComputerChoice = () => {
 const getWinnerAndIncrementScore = (humanChoice) => {
   const computerChoice = getComputerChoice();
   console.log(computerChoice);
-  imgComputer.src = getImgSrc(computerChoice);
+  imgComputer.src = getImgSrc("rock");
+  // bouncing
+  imgComputer.classList.add("bouncing");
+  setTimeout(() => {
+    imgComputer.classList.remove("bouncing");
+    imgComputer.src = getImgSrc(computerChoice);
+  }, 1000);
 
   if (humanChoice === computerChoice) return;
   if (
@@ -42,14 +48,32 @@ const getWinnerAndIncrementScore = (humanChoice) => {
 choicesRock.addEventListener("click", (e) => {
   imgHuman.src = getImgSrc("rock");
   getWinnerAndIncrementScore("rock");
+  // bouncing
+  imgHuman.classList.add("bouncing");
+  setTimeout(() => {
+    imgHuman.classList.remove("bouncing");
+    imgHuman.src = getImgSrc("rock");
+  }, 1000);
 });
 
 choicesPaper.addEventListener("click", (e) => {
-  imgHuman.src = getImgSrc("paper");
+  imgHuman.src = getImgSrc("rock");
   getWinnerAndIncrementScore("paper");
+  // bouncing
+  imgHuman.classList.add("bouncing");
+  setTimeout(() => {
+    imgHuman.classList.remove("bouncing");
+    imgHuman.src = getImgSrc("paper");
+  }, 1000);
 });
 
 choicesScissors.addEventListener("click", (e) => {
-  imgHuman.src = getImgSrc("scissors");
+  imgHuman.src = getImgSrc("rock");
   getWinnerAndIncrementScore("paper");
+  // bouncing
+  imgHuman.classList.add("bouncing");
+  setTimeout(() => {
+    imgHuman.classList.remove("bouncing");
+    imgHuman.src = getImgSrc("scissors");
+  }, 1000);
 });
